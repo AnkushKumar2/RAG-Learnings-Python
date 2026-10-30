@@ -59,21 +59,14 @@ messages = [
 ]
 
 # Invoke the model with the combined input
-print("Calling model...")
-try:
-    result = model.invoke(messages)
-    print("\n--- Generated Response ---")
-    print(result.content)
-    print("Raw:", result)
-except Exception as e:
-    print("ERROR:", type(e).__name__, e)
+result = model.invoke(messages)
 
 # Display the full result and content only
-# print("\n--- Generated Response ---")
+print("\n--- Generated Response ---")
 # print("Full result:")
 # print(result)
-# print("Content only:")
-# print(result.content)    
+print("Content only:")
+print(result.content)
 
 
 # Synthetic Questions: 
